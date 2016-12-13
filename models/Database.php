@@ -6,7 +6,7 @@ class Database{
 
 	private static function connect(){
 		try {
-			self::$conn = new PDO("mysql:host=localhost;dbname=online_shop","root","123456");
+			self::$conn = new PDO("mysql:host=localhost;dbname=test_online_shop_pure1","root","123456");
 			self::$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			self::$conn->query('SET NAMES "utf8"'); 
 		} catch (PDOException $e) {
