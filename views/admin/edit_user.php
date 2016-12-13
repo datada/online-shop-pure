@@ -1,9 +1,10 @@
 <div class="col-lg-7" style="padding-bottom:120px">
     <form action="routes/edit_user.php" method="POST">
         <input type='hidden' name='txtId' value="<?php echo $data['id']?>" />
+        <input type='hidden' name='txtUser' value="<?php echo $data['username']?>" />
         <div class="form-group">
             <label>Username</label>
-            <input class="form-control" name="txtUser" 
+            <input class="form-control" name="user" 
             <?php echo 'value="'.$data['username'].'"' ?> disabled />
         </div>
         <div class="form-group">

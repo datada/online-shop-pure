@@ -38,7 +38,7 @@ class User{
 	public static function editUser(User $user){
 		$sql="update users 
 		set username='".$user->username."',password_md5='".$user->password."',email='".$user->email."',level=".$user->level.",updated_at=NOW()
-		where id='".$id."'";
+		where id='".$user->id."'";
 		Database::update($sql);
 	}
 
