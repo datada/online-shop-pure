@@ -5,10 +5,10 @@
     <ul class="thumbnails">
       <?php foreach($lastest_product as $item){ ?>
         <li class="span3">
-          <a class='productname' href="<?php echo 'chi-tiet-san-pham.php?id='.$item['id'] ?>"><?php echo $item['name'] ?></a>
+          <a class='productname' href="<?php echo 'chi-tiet/'.$item['alias'].'-'.$item['id'].'.html'; ?>"><?php echo $item['name'] ?></a>
           <div class="thumbnail">
             <span class="sale tooltip-test">Sale</span>
-            <?php echo "<a href='chi-tiet-san-pham.php?id=".$item['id']."'><img alt='' src='resources/upload/".$item['image']."'></a>"; ?>
+            <a href="<?php echo 'chi-tiet/'.$item['alias'].'-'.$item['id'].'.html'; ?>"><img alt='' src="resources/upload/<?php echo $item['image']?>"></a>
             <div class="pricetag">
               <span class="spiral"></span>
               <?php echo "<a href='routes/mua-hang.php?id=".$item['id']."' class='productcart'>ADD TO CART</a>"; ?>
@@ -33,11 +33,10 @@
       foreach($random_product as $item){
         ?>
         <li class="span3">
-          <a class='productname' href="<?php echo 'chi-tiet-san-pham.php?id='.$item['id'] ?>"><?php echo $item['name'] ?></a>
+          <a class='productname' href="<?php echo 'chi-tiet/'.$item['alias'].'-'.$item['id'].'.html'; ?>"><?php echo $item['name'] ?></a>
           <div class="thumbnail">
             <span class="sale tooltip-test">Sale</span>
-            <?php echo "<a href='chi-tiet-san-pham.php?id=".$item['id']."'><img alt='' src='resources/upload/".$item['image']."'></a>";
-            ?>
+            <a href="<?php echo 'chi-tiet/'.$item['alias'].'-'.$item['id'].'.html'; ?>"><img alt='' src="resources/upload/<?php echo $item['image'] ?>"></a>
             <div class="pricetag">
               <span class="spiral"></span>
               <?php echo "<a href='routes/mua-hang.php?id=".$item['id']."' class='productcart'>ADD TO CART</a>"; ?>

@@ -12,9 +12,9 @@ class UserController{
 			$user = new User();
 			$user->setProperty(0,$username,$password,$email,$level);
 			User::addUser($user);
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 	}
 
 	public function editUser(){

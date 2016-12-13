@@ -27,8 +27,8 @@
           if ($product_cart != null)
           foreach($product_cart as $item) { ?>
           <tr>
-            <td class="image"><a href="<?php echo 'chi-tiet-san-pham.php?id='.$item['id'].'&alias='.$item['alias'] ?>"><img title="product" alt="product" <?php echo 'src="resources/upload/'.$item['image'].'"' ?> height="50" width="50"></a></td>
-            <td class="name"><a href="<?php echo 'chi-tiet-san-pham.php?id='.$item['id'].'&alias='.$item['alias'] ?>"><?php echo $item["name"] ?></a></td>
+            <td class="image"><a href="<?php echo 'chi-tiet/'.$item['alias'].'-'.$item['id'].'.html'; ?>"><img title="product" alt="product" <?php echo 'src="resources/upload/'.$item['image'].'"' ?> height="50" width="50"></a></td>
+            <td class="name"><a href="<?php echo 'chi-tiet/'.$item['alias'].'-'.$item['id'].'.html'; ?>"><?php echo $item["name"] ?></a></td>
             <td class="quantity"><input class="span1 qty" type="text" size="1" <?php echo 'value="'.$item["quantity"].'"' ?> name="quantity[40]" />
             </td>
             <td class="total"> 

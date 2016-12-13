@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule "index.html" "index.php"
+RewriteRule "lien-he.html" "lien-he.php"
+RewriteRule "gio-hang.html" "gio-hang.php"
+RewriteRule "dang-nhap.html" "dang-nhap.php"
+RewriteRule "^chi-tiet/(.*)-(.*).html$" "chi-tiet-san-pham.php?id=$2&alias=$1"
+RewriteRule "^loai-san-pham/(.*)/(.*)-(.*).html$" "loai-san-pham.php?id=$3&alias=$2&page=$1"

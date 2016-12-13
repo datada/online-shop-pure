@@ -6,5 +6,5 @@ if (isset($_GET['id'])) {
 	$product_id = $_GET['id'];
 	$cartControl->addToCart($product_id);
 }
-header("Location: ../gio-hang.php");
+header("Location: ../gio-hang.html");
 ?>

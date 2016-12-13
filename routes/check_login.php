@@ -7,6 +7,6 @@ if ($login) {
 } else {
 	session_start();
 	$_SESSION['errors'] = array('Tên đăng nhập hoặc mật khẩu không đúng!');
-	header("Location: ../dang-nhap.php");
+	header("Location: ../dang-nhap.html");
 }
 ?>

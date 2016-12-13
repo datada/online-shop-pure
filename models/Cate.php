@@ -19,6 +19,11 @@ class Cate {
 		$this->description=$description;
 	}
 
+	public static function getCate($cate_id) {
+		$sql="select * from cates where id = '$cate_id'";
+		$cate = Database::select($sql);
+		return $cate;
+	}
 	public static function getAllCate() {
 		$sql="select * from cates";
 		$cates = Database::selectAll($sql);
@@ -34,12 +39,14 @@ class Cate {
 		        $menus[$id] = array(
 		            'id' => $id,
 		            'name' => $cate['name'],
+		            'alias' => $cate['alias'],
 		            'parent_id' => $cate['parent_id'],
 		            'has_sub' => 'false',
 		            'sub_cate' => array()
 		        );
 		    } else { // Nếu cate hiện tại đã tồn tại => bổ sung name và parent_id
 		        $menus[$id]['name'] = $cate['name'];
+		        $menus[$id]['alias'] = $cate['alias'];
 		        $menus[$id]['parent_id'] = $cate['parent_id'];
 		    }
 		    if ($cate['parent_id'] != 0) {// Nếu có cate cha
@@ -70,12 +77,6 @@ class Cate {
 		$sql="select id,name,alias from cates where parent_id = '".$cate_parent_id."'";
 		$menu_cate= Database::selectAll($sql);
 		return $menu_cate;
-	}
-
-	public static function getNameCate($id){
-		$sql="select name from cates where id = '".$id."'";
-		$name_cate= Database::select($sql);
-		return $name_cate;
 	}
 
 	public static function getCateParentId($cate_id){

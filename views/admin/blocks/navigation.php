@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['username'])){
-    header("Location: dang-nhap.php");
+    header("Location: dang-nhap.html");
 }
 ?>
 
@@ -13,7 +13,7 @@ if(!isset($_SESSION['username'])){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">Admin Area</a>
+        <a class="navbar-brand" href="index.html">Admin Area</a>
     </div>
     <!-- /.navbar-header -->
 

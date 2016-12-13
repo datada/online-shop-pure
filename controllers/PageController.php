@@ -36,14 +36,14 @@ class PageController{
 			$cate_parent_id = Cate::getCateParentId($cate_id);
 			if ($cate_parent_id != 0)
 				$menu_cate = Cate::getMenuCate($cate_parent_id);
-			$name_cate = Cate::getNameCate($cate_id);
+			$cate = Cate::getCate($cate_id);
 
 			$numberOfProductCate = (int)Product::getNumberOfProductCate($cate_id);
 			$pagination = new stdClass; // Phân trang
 			$pagination->currentPage = $paged;
 			$pagination->lastPage = floor($numberOfProductCate/$numberOfProductsPerPage) + 1;
 			// var_dump($pagination);
-			$this->setPageTitle($name_cate['name']);
+			$this->setPageTitle($cate['name']);
 			include_once('views/user/pages/product_cate.php');
 		}
 	}

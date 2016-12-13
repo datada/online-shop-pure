@@ -45,7 +45,10 @@ class Product{
 		$offset = $numberOfProducts*($paged-1);
 		$limit = $numberOfProducts;
 		$sql="select id,name,image,price,alias from products where cate_id = '$cate_id' limit $offset,$limit";
+		// var_dump($sql);
+
 		$product_cate = Database::selectAll($sql);
+		// die;
 		return $product_cate;
 	}
 

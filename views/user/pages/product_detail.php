@@ -159,10 +159,10 @@
       <ul class="thumbnails">
         <?php foreach($related_product as $item_related_product){ ?>
         <li class="span3">
-          <a class="productname" href="<?php echo 'chi-tiet-san-pham.php?id='.$item_related_product['id'] ?>"><?php echo $item_related_product['name'] ?> </a>
+          <a class="productname" href="<?php echo 'chi-tiet/'.$item_related_product['alias'].'-'.$item_related_product['id'].'.html' ?>"><?php echo $item_related_product['name'] ?> </a>
           <div class="thumbnail">
             <span class="sale tooltip-test">Sale</span>
-            <a href="<?php echo 'chi-tiet-san-pham.php?id='.$item_related_product['id'] ?>"><img alt="" <?php echo 'src="resources/upload/'.$item_related_product['image'].'"' ?> ></a>
+            <a href="<?php echo 'chi-tiet/'.$item_related_product['alias'].'-'.$item_related_product['id'].'.html' ?>"><img alt="" <?php echo 'src="resources/upload/'.$item_related_product['image'].'"' ?> ></a>
             <div class="pricetag">
               <span class="spiral"></span><a href="<?php echo 'routes/mua-hang.php?id='.$item_related_product['id'] ?>" class="productcart">ADD TO CART</a>
               <div class="price">

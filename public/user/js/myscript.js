@@ -11,7 +11,7 @@ $(document).ready(function(){
 			cache: false,
 			data: {"id": rowid, "qty": qty},
 			success: function(data){
-				window.location="gio-hang.php";
+				window.location="gio-hang.html";
 			}
 		});
 	});
